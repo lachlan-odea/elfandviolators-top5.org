@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>elfandviolators@top5.org — DOLLS IS TOP 5</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: #0a0a1a;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  /* TICKER */
+  .ticker {
+    background: gold;
+    color: #1a0050;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    padding: 0.4rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ticker-inner {
+    display: inline-block;
+    animation: ticker 22s linear infinite;
+  }
+  @keyframes ticker {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* HERO */
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem 3rem;
+    background: linear-gradient(180deg, #1a0050 0%, #0a0a1a 100%);
+    border-bottom: 3px solid gold;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '🏆';
+    font-size: 12rem;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.06;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero > * { position: relative; z-index: 1; }
+
+  .site-url {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: gold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 14vw, 8rem);
+    color: gold;
+    line-height: 0.95;
+    text-shadow: 0 0 60px rgba(255,215,0,0.4), 0 5px 0 #7a5200;
+    letter-spacing: 6px;
+    margin-bottom: 1rem;
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .badge {
+    display: inline-block;
+    background: gold;
+    color: #1a0050;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+  .fine-print {
+    font-size: 0.6rem;
+    color: #333;
+    margin-top: 0.75rem;
+  }
+
+  /* STAT STRIP */
+  .stat-strip {
+    display: flex;
+    justify-content: center;
+  }
+  .stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 1.2rem 0.5rem;
+    border-right: 2px solid #7a5200;
+    background: gold;
+    color: #1a0050;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    display: block;
+    color: #1a0050;
+  }
+  .stat-label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4a3000;
+  }
+
+  /* SECTIONS */
+  section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: gold;
+    letter-spacing: 3px;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 0.6rem;
+  }
+
+  /* PROCLAMATION */
+  .proclamation {
+    background: #0f0f1f;
+    border: 2px solid gold;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .proclamation p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 0.75rem;
+  }
+  .proclamation p:last-child { margin-bottom: 0; }
+  .proclamation strong {
+    color: gold;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+
+  /* MEME GRID */
+  .meme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .meme-card {
+    background: #111;
+    border: 2px solid #222;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .meme-img {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    background: #1a1a2e;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+  .meme-top {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
+    line-height: 1.2;
+  }
+  .meme-bottom {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    color: gold;
+    text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
+    line-height: 1.2;
+  }
+  .meme-caption {
+    padding: 0.6rem;
+    font-size: 0.75rem;
+    color: #888;
+    font-style: italic;
+    border-top: 1px solid #1a1a1a;
+  }
+
+  /* HALL OF FAME */
+  .hof-card {
+    background: linear-gradient(135deg, #1a1500 0%, #0f0f1f 100%);
+    border: 2px solid gold;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .hof-card::after {
+    content: '★ ★ ★ ★ ★';
+    font-size: 1.5rem;
+    color: rgba(255,215,0,0.1);
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 8px;
+  }
+  .hof-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: gold;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border: 4px solid #7a5200;
+  }
+  .hof-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: gold;
+    letter-spacing: 6px;
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .hof-title {
+    font-size: 0.85rem;
+    color: #aaa;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .hof-stat {
+    display: inline-block;
+    background: gold;
+    color: #1a0050;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.3rem 1.2rem;
+    border-radius: 4px;
+    letter-spacing: 2px;
+  }
+
+  /* TRAINING */
+  .training-steps { display: grid; gap: 1rem; margin-top: 1rem; }
+  .step-card {
+    background: #0f0f1f;
+    border: 1px solid #222;
+    border-left: 4px solid gold;
+    border-radius: 6px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: gold;
+    line-height: 1;
+    min-width: 50px;
+  }
+  .step-content h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+  }
+  .step-content p {
+    font-size: 0.88rem;
+    color: #999;
+    line-height: 1.6;
+  }
+  .step-content .aside {
+    font-size: 0.7rem;
+    color: #444;
+    font-style: italic;
+    margin-top: 0.4rem;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .testimonial {
+    background: #0f0f1f;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1.2rem;
+  }
+  .testimonial p {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+  .testimonial .author {
+    font-size: 0.7rem;
+    color: #444;
+    font-style: normal;
+  }
+
+  /* FAQ */
+  .faq-item {
+    background: #0f0f1f;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .faq-q {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: gold;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+  .faq-a {
+    font-size: 0.88rem;
+    color: #999;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #050510;
+    border-top: 3px solid gold;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #333;
+    font-size: 0.72rem;
+  }
+  footer .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: gold;
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+  }
+  .disclaimer {
+    background: #0f0f1f;
+    border: 1px dashed #222;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem auto;
+    max-width: 560px;
+    font-size: 0.65rem;
+    color: #333;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 480px) {
+    .stat-strip { flex-wrap: wrap; }
+    .stat-item { flex: 1 1 50%; }
+  }
+
+  /* MERCH STORE */
+  .merch-store {
+    background: #07071a;
+    border-top: 3px solid gold;
+    border-bottom: 3px solid gold;
+  }
+  .merch-store section { padding-bottom: 1rem; }
+  .merch-banner {
+    background: gold;
+    color: #1a0050;
+    text-align: center;
+    padding: 0.6rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+  }
+  .merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+  .merch-card {
+    background: #0f0f1f;
+    border: 1px solid #2a2a3a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .merch-card:hover { border-color: gold; }
+  .merch-preview {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a2e;
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+  }
+  .merch-tshirt {
+    width: 120px;
+    height: 110px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .merch-tshirt svg, .merch-hat svg { width: 100%; height: 100%; }
+  .merch-hat {
+    width: 130px;
+    height: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .merch-label-on-item {
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1.5px;
+    text-align: center;
+    line-height: 1.1;
+    pointer-events: none;
+  }
+  .merch-sold-out {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    background: #cc0000;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    padding: 0.3rem 1rem;
+    border: 3px solid white;
+    border-radius: 4px;
+    z-index: 10;
+    white-space: nowrap;
+  }
+  .merch-info {
+    padding: 1rem 1.2rem;
+    border-top: 1px solid #1a1a2a;
+  }
+  .merch-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+  }
+  .merch-desc {
+    font-size: 0.78rem;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+  .merch-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .merch-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: gold;
+    letter-spacing: 1px;
+  }
+  .merch-price .merch-price-note {
+    font-size: 0.6rem;
+    color: #444;
+    font-family: 'Barlow', sans-serif;
+    font-style: italic;
+    display: block;
+    letter-spacing: 0;
+    margin-top: -4px;
+  }
+  .merch-btn {
+    background: gold;
+    color: #1a0050;
+    border: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .merch-btn:hover { opacity: 0.85; }
+  .merch-btn.sold { background: #333; color: #666; cursor: not-allowed; }
+  .merch-store-note {
+    font-size: 0.65rem;
+    color: #333;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-style: italic;
+    padding-bottom: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-inner">🏆 DOLLS IS TOP 5 &nbsp;·&nbsp; THE GOAT HAS ARRIVED &nbsp;·&nbsp; AN HISTORIC ACHIEVEMENT &nbsp;·&nbsp; BOW DOWN &nbsp;·&nbsp; DOLLS IS TOP 5 &nbsp;·&nbsp; THE LEGEND CONTINUES &nbsp;·&nbsp; TOP 5 CERTIFIED &nbsp;·&nbsp; NEVER FORGET &nbsp;·&nbsp; 🏆 &nbsp;·&nbsp; DOLLS IS TOP 5 &nbsp;·&nbsp; THE GOAT HAS ARRIVED &nbsp;·&nbsp; AN HISTORIC ACHIEVEMENT &nbsp;·&nbsp; BOW DOWN &nbsp;·&nbsp;</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="site-url">elfandviolators@top5.org &nbsp;·&nbsp; est. 2024 &nbsp;·&nbsp; the official record of history</div>
+  <h1>DOLLS<br>IS TOP 5</h1>
+  <div class="hero-sub">A singular achievement. An era-defining moment. A legacy that will echo through the ages.</div>
+  <div class="badge">🏆 OFFICIALLY · VERIFIABLY · UNDENIABLY TOP 5 🏆</div>
+  <div class="fine-print">no further questions</div>
+</div>
+
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-item">
+    <span class="stat-num">TOP</span>
+    <span class="stat-label">Category</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">5</span>
+    <span class="stat-label">The number. Five.</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">YES</span>
+    <span class="stat-label">Confirmed</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">🏆</span>
+    <span class="stat-label">Trophy count</span>
+  </div>
+</div>
+
+<!-- HALL OF FAME -->
+<section>
+  <h2>🌟 Hall of Fame Inductee</h2>
+  <div class="hof-card">
+    <div class="hof-avatar">👑</div>
+    <span class="hof-name">DOLLS</span>
+    <div class="hof-title">Top 5 Finisher &nbsp;·&nbsp; Icon &nbsp;·&nbsp; Legend &nbsp;·&nbsp; Champion</div>
+    <div class="hof-stat">TOP 5 · OFFICIALLY</div>
+  </div>
+  <div class="proclamation">
+    <p>Let it be known across all lands and all leagues that <strong>DOLLS</strong> has achieved that which few dare dream:</p>
+    <p>A placement within the top five. The top. Five. Not six. Not seven. <strong>FIVE.</strong></p>
+    <p>This website exists so that future generations may know of this achievement and draw strength from it in their darkest hours.</p>
+  </div>
+</section>
+
+<!-- MEMES -->
+<section>
+  <h2>📸 Iconic Moments</h2>
+  <div class="meme-grid">
+    <div class="meme-card">
+      <div class="meme-img">
+        🧠
+        <div class="meme-top">ORDINARY PEOPLE:</div>
+        <div class="meme-bottom">DOLLS, AN ELITE:</div>
+      </div>
+      <div class="meme-caption">The gap between us and them</div>
+    </div>
+    <div class="meme-card">
+      <div class="meme-img">
+        🐐
+        <div class="meme-top">ASKED IF TOP 5</div>
+        <div class="meme-bottom">THE ANSWER IS YES</div>
+      </div>
+      <div class="meme-caption">Factually accurate. We checked.</div>
+    </div>
+    <div class="meme-card">
+      <div class="meme-img">
+        🏆
+        <div class="meme-top">DOLLS ENTERING</div>
+        <div class="meme-bottom">THE HALL OF FAME</div>
+      </div>
+      <div class="meme-caption">The doors opened on their own. Respect.</div>
+    </div>
+    <div class="meme-card">
+      <div class="meme-img">
+        😤
+        <div class="meme-top">THE HATERS SAID</div>
+        <div class="meme-bottom">DOLLS SAID: TOP 5</div>
+      </div>
+      <div class="meme-caption">Unbothered. Certified. Arrived.</div>
+    </div>
+    <div class="meme-card">
+      <div class="meme-img">
+        📜
+        <div class="meme-top">THE ANCIENT TEXTS</div>
+        <div class="meme-bottom">FORETOLD THIS</div>
+      </div>
+      <div class="meme-caption">Scholars are still translating the prophecy</div>
+    </div>
+    <div class="meme-card">
+      <div class="meme-img">
+        🎖️
+        <div class="meme-top">NOT EVERYONE</div>
+        <div class="meme-bottom">CAN BE TOP 5</div>
+      </div>
+      <div class="meme-caption">But Dolls can. And did. And is.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section>
+  <h2>💪 Train Like Me & You Too Can Be Top 5</h2>
+  <p style="color:#666; font-size:0.88rem; margin-bottom:1.2rem; font-style:italic;">Dolls' official programme for elite performance. The methodology is proprietary. The results speak for themselves.</p>
+  <div class="training-steps">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <h3>Believe you are Top 5</h3>
+        <p>Before anything else, you must see yourself as someone who finishes in the top five. Visualise it every morning. Journal about it. The universe responds to conviction.</p>
+        <div class="aside">This step accounts for roughly 97% of the programme.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <h3>Define "Top 5" broadly and with confidence</h3>
+        <p>Top 5 is a feeling. A state of being. It's not about numbers — it's about energy. Walk into every room like someone who is Top 5. Because you are. Probably.</p>
+        <div class="aside">Legal note: "Top 5" is a registered personal brand. Not an audited statistic.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <h3>Never ask follow-up questions</h3>
+        <p>If someone says "Top 5 out of how many," simply nod knowingly and walk away. The confident exit communicates everything. Details are for accountants.</p>
+        <div class="aside">Advanced technique. Takes years to perfect.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <h3>Surround yourself with fewer people</h3>
+        <p>Your ranking is directly influenced by your peer group size. Fewer peers means a higher relative position. This is called "optimising your competitive environment."</p>
+        <div class="aside">This is genuinely the most important tactical tip on this list.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">05</div>
+      <div class="step-content">
+        <h3>Celebrate everything, loudly</h3>
+        <p>Did you finish a match? Celebrate. Did someone else not beat you today? Celebrate. Is it Wednesday? Celebrate. Champions understand that momentum is built through relentless self-affirmation.</p>
+        <div class="aside">Studies show that 8 out of 10 champions celebrate things that don't fully warrant it.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">06</div>
+      <div class="step-content">
+        <h3>Build your legacy infrastructure early</h3>
+        <p>A website helps. Merchandise is optional but advised. The important thing is that when future generations search for proof of your Top 5 finish, they find something impressive-looking.</p>
+        <div class="aside">You are currently reading Dolls' legacy infrastructure. It's working.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">07</div>
+      <div class="step-content">
+        <h3>Rest. You have earned it.</h3>
+        <p>Top 5 is not a destination — it is a home. Once you arrive, you are there. You don't need to do anything else. Just be Top 5. Breathe it in. Sleep well, champion.</p>
+        <div class="aside">Dolls has been resting since the finish. It shows. In a good way.</div>
+      </div>
+    </div>
+  </div>
+  <p style="color:#222; font-size:0.65rem; margin-top:1rem; font-style:italic; text-align:center;">*results may vary. "Top 5" not defined herein. Programme has not been peer reviewed. Dolls is not a licensed coach.</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <h2>💬 What People Are Saying</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <p>"I have studied the great finishes of our time. Dolls' Top 5 performance occupies a rare category I have had to create specifically for this occasion."</p>
+      <div class="author">— An analyst who was asked nicely</div>
+    </div>
+    <div class="testimonial">
+      <p>"When I heard Dolls was Top 5 I said nothing for several minutes. I was processing the magnitude of it."</p>
+      <div class="author">— A witness, still processing</div>
+    </div>
+    <div class="testimonial">
+      <p>"I looked at the final standings and saw Dolls' name. Above two other names. I will not elaborate further."</p>
+      <div class="author">— The league commissioner, carefully</div>
+    </div>
+    <div class="testimonial">
+      <p>"Honestly? Inspiring. To finish where they finished and still have this much confidence? You can't teach that. Only Dolls has it."</p>
+      <div class="author">— Everyone, when pressed</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <h2>❓ Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-q">Is Dolls really Top 5?</div>
+    <div class="faq-a">Yes. This is verifiable. Dolls finished in a position that is within the top five positions. We do not feel any further explanation is necessary or appropriate at this time.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How many players were in the league?</div>
+    <div class="faq-a">This question has been reviewed by our legal team and we have been advised not to answer it. What we can confirm is that Dolls is Top 5. We refer you to the badge in the header.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is this the greatest Top 5 finish of all time?</div>
+    <div class="faq-a">We believe so, yes. We have not done extensive research into other Top 5 finishes but we feel strongly that this one is up there. Possibly the most Top 5 a Top 5 has ever been.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Will Dolls defend this ranking next season?</div>
+    <div class="faq-a">Top 5 is not a position one defends. It is a position one inhabits. Dolls is Top 5 in spirit, in legacy, and in the official record which is this website. That cannot be taken away.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Who finished above Dolls?</div>
+    <div class="faq-a">This page is about Dolls. Please redirect your attention accordingly. Thank you for your understanding.</div>
+  </div>
+</section>
+
+<!-- MERCH STORE -->
+<div class="merch-store">
+  <div class="merch-banner">🛒 OFFICIAL DOLLS TOP 5 MERCH STORE · LIMITED EDITION · WHILE STOCKS LAST · PROBABLY</div>
+  <section>
+    <h2>👕 Official Merch</h2>
+    <p style="color:#666; font-size:0.88rem; margin-bottom:0.5rem; font-style:italic;">Wear the legacy. Rep the finish. Own a piece of history. These items exist.</p>
+    <div class="merch-grid">
+
+      <!-- TSHIRT 1 -->
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div class="merch-tshirt">
+            <svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 10 L0 35 L20 42 L20 100 L100 100 L100 42 L120 35 L90 10 L75 25 Q60 35 45 25 Z" fill="#1a1a4a" stroke="#3a3a7a" stroke-width="1.5"/>
+              <text x="60" y="58" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="11" fill="gold" letter-spacing="1">DOLLS</text>
+              <text x="60" y="72" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="8" fill="gold" letter-spacing="1">IS TOP 5</text>
+              <text x="60" y="84" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="6" fill="#aaa" letter-spacing="0.5">EST. 2024</text>
+            </svg>
+          </div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">The Statement Tee</div>
+          <div class="merch-desc">Classic navy. Gold print. "DOLLS IS TOP 5" across the chest so nobody forgets. Ever.</div>
+          <div class="merch-footer">
+            <div class="merch-price">$34.99 <span class="merch-price-note">+ shipping from an undisclosed location</span></div>
+            <button class="merch-btn" onclick="alert('Thank you for your order. Estimated delivery: when it feels right.')">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TSHIRT 2 -->
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div class="merch-tshirt">
+            <svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 10 L0 35 L20 42 L20 100 L100 100 L100 42 L120 35 L90 10 L75 25 Q60 35 45 25 Z" fill="#2a1a00" stroke="#7a5200" stroke-width="1.5"/>
+              <text x="60" y="50" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="9" fill="gold" letter-spacing="1">I FINISHED</text>
+              <text x="60" y="63" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="18" fill="gold" letter-spacing="2">TOP 5</text>
+              <text x="60" y="78" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="6" fill="#aaa" letter-spacing="0.5">NO FURTHER QUESTIONS</text>
+            </svg>
+          </div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">The Conversation Ender</div>
+          <div class="merch-desc">"I Finished Top 5." Big gold text. Small asterisk. No asterisk. Just the statement.</div>
+          <div class="merch-footer">
+            <div class="merch-price">$34.99 <span class="merch-price-note">no returns on truth</span></div>
+            <button class="merch-btn" onclick="alert('Order received. Your shirt will arrive when the universe is ready.')">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TSHIRT 3 - SOLD OUT -->
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div class="merch-tshirt" style="opacity:0.45;">
+            <svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 10 L0 35 L20 42 L20 100 L100 100 L100 42 L120 35 L90 10 L75 25 Q60 35 45 25 Z" fill="#1a1a1a" stroke="#333" stroke-width="1.5"/>
+              <text x="60" y="52" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="7" fill="#aaa" letter-spacing="1">ASK ME ABOUT</text>
+              <text x="60" y="64" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="11" fill="gold" letter-spacing="1">MY TOP 5</text>
+              <text x="60" y="76" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="7" fill="#aaa" letter-spacing="1">FINISH</text>
+            </svg>
+          </div>
+          <div class="merch-sold-out">SOLD OUT</div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">The Conversation Starter</div>
+          <div class="merch-desc">"Ask Me About My Top 5 Finish." They will ask. You will answer. It will be a journey.</div>
+          <div class="merch-footer">
+            <div class="merch-price">$39.99 <span class="merch-price-note">sold out in minutes. literally minutes.</span></div>
+            <button class="merch-btn sold" disabled>SOLD OUT</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HAT 1 -->
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div class="merch-hat">
+            <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="65" cy="78" rx="60" ry="10" fill="#111"/>
+              <path d="M15 70 Q15 20 65 20 Q115 20 115 70 Z" fill="#1a1a4a" stroke="#3a3a7a" stroke-width="1.5"/>
+              <rect x="15" y="68" width="100" height="6" fill="#0f0f3f" rx="2"/>
+              <line x1="15" y1="68" x2="115" y2="68" stroke="#3a3a7a" stroke-width="1"/>
+              <text x="65" y="52" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="10" fill="gold" letter-spacing="2">TOP 5</text>
+              <text x="65" y="64" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="6" fill="#aaa" letter-spacing="1">DOLLS · EST 2024</text>
+            </svg>
+          </div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">The Championship Cap</div>
+          <div class="merch-desc">Navy snapback. Gold "TOP 5" embroidered on the front. Wear it everywhere. Especially to the league's next game.</div>
+          <div class="merch-footer">
+            <div class="merch-price">$29.99 <span class="merch-price-note">one size fits all Top 5 finishers</span></div>
+            <button class="merch-btn" onclick="alert('Hat order confirmed. May it shield you from follow-up questions.')">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HAT 2 -->
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div class="merch-hat">
+            <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="65" cy="78" rx="60" ry="10" fill="#111"/>
+              <path d="M15 70 Q15 20 65 20 Q115 20 115 70 Z" fill="#2a1a00" stroke="#7a5200" stroke-width="1.5"/>
+              <rect x="15" y="68" width="100" height="6" fill="#1a0f00" rx="2"/>
+              <line x1="15" y1="68" x2="115" y2="68" stroke="#7a5200" stroke-width="1"/>
+              <text x="65" y="48" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="7" fill="#aaa" letter-spacing="1">DOLLS IS</text>
+              <text x="65" y="60" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="12" fill="gold" letter-spacing="2">TOP 5</text>
+            </svg>
+          </div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">The Bucket Hat of Legacy</div>
+          <div class="merch-desc">Gold on brown. "DOLLS IS TOP 5" all the way around the brim. 360 degrees of achievement. No blind spots.</div>
+          <div class="merch-footer">
+            <div class="merch-price">$32.99 <span class="merch-price-note">brim coverage: total</span></div>
+            <button class="merch-btn" onclick="alert('Excellent choice. Your bucket hat is being prepared with the gravity this moment deserves.')">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HAT 3 - LIMITED -->
+      <div class="merch-card">
+        <div class="merch-preview" style="position:relative;">
+          <div style="position:absolute; top:10px; right:10px; background:#cc0000; color:white; font-family:'Bebas Neue',sans-serif; font-size:0.7rem; padding:0.2rem 0.5rem; border-radius:3px; letter-spacing:1px;">3 LEFT</div>
+          <div class="merch-hat">
+            <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="65" cy="78" rx="60" ry="10" fill="#111"/>
+              <path d="M15 70 Q15 20 65 20 Q115 20 115 70 Z" fill="#1a0020" stroke="#5a005a" stroke-width="1.5"/>
+              <rect x="15" y="68" width="100" height="6" fill="#0f001a" rx="2"/>
+              <line x1="15" y1="68" x2="115" y2="68" stroke="#5a005a" stroke-width="1"/>
+              <text x="65" y="44" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="6.5" fill="#cc88ff" letter-spacing="1">CHAMPION</text>
+              <text x="65" y="55" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="13" fill="gold" letter-spacing="2">🏆</text>
+              <text x="65" y="67" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="6.5" fill="#cc88ff" letter-spacing="1">EDITION</text>
+            </svg>
+          </div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">Champion Edition Fitted</div>
+          <div class="merch-desc">Purple. Trophy emblem. "Champion Edition." Only 3 remaining. Don't think about why only 3 sold.</div>
+          <div class="merch-footer">
+            <div class="merch-price">$49.99 <span class="merch-price-note">collector's item. trust us.</span></div>
+            <button class="merch-btn" onclick="alert('You have secured one of the final 3 Champion Edition hats. Historians will note this.')">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="merch-store-note">All purchases support the ongoing documentation of Dolls' Top 5 legacy. Shipping times are estimates. "Estimates" is used loosely. All sales final. elfandviolators@top5.org accepts no responsibility for conversations started while wearing this merchandise.</p>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">elfandviolators@top5.org</span>
+  <p>The official, permanent, unimpeachable record of Dolls' Top 5 finish.</p>
+  <div class="disclaimer">
+    DISCLAIMER: This website is a tribute, a legacy, and a monument. It is not a sports journalism outlet.
+    No further context about the final standings will be provided by this organisation.
+    elfandviolators@top5.org is not a functioning email address. Top 5. That's all.
+  </div>
+  <p style="margin-top:1.2rem; color:#1a1a1a; font-size:0.6rem;">© 2024 elfandviolators@top5.org &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Top 5 &nbsp;·&nbsp; Always Top 5</p>
+</footer>
+
+</body>
+</html>
